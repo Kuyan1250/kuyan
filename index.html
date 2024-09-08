@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="icon" type="image" href="img/logo.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <style>
+      .bg {
+        background-image: url(img/wall1.png);
+        background-size: cover;
+        padding-top: 2rem;
+      }
+
+      .navbar {
+        backdrop-filter: blur(30px);
+        box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+        border: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .jumbotron {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+      }
+
+      .blur {
+        backdrop-filter: blur(30px);
+        padding-top: 2rem;
+      }
+
+      .img-logo img {
+        filter: grayscale(1);
+      }
+
+      .img-logo img:hover {
+        transition: 0.5s;
+        filter: grayscale(0);
+      }
+
+      .card-skills img {
+        filter: grayscale(1);
+      }
+
+      .card-skills img:hover {
+        transition: 0.5s;
+        filter: grayscale(0);
+      }
+
+      #project {
+        background-color: #31363f;
+      }
+
+      #logo {
+        background-color: #222831;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+      }
+
+      #about {
+        background-color: #31363f;
+      }
+
+      #skills {
+        background-color: #222831;
+      }
+
+      #contact {
+        background-color: #222831;
+      }
+
+      section {
+        padding-top: 8rem;
+        padding-bottom: 6rem;
+      }
+
+      li {
+        color: #0dcaf0;
+      }
+    </style>
+  </head>
+  <body id="home">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg shadow-lg fixed-top" data-bs-theme="dark">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img class="rounded-circle" src="img/logo.png" width="30" alt="" /> Agvian</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            <a class="nav-link" href="#about">About</a>
+            <a class="nav-link" href="#skills">Skills</a>
+            <a class="nav-link" href="#project">Project</a>
+            <a class="nav-link" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Akhir navbar -->
+
+    <!-- jumbotron -->
+    <div class="b-example-divider cs"></div>
+    <div class="bg">
+      <div class="blur">
+        <div class="container col-xxl-8 px-4 py-5">
+          <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="img/Hero1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
+            </div>
+            <div class="col-sm-6">
+              <h3 class="text-light fw-bold">Hi, I'm</h3>
+              <h1 class="display-5 fw-bold text-light lh-1 mb-3">Agvian Alif Ramdhani<a class="text-danger fs-1" style="text-decoration: none" href="">.</a></h1>
+              <p class="text-light fw-bold">UI/UX Designer</p>
+              <a type="button" href="#skills" class="btn btn-info text-light btn-lg">View Skills</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Akhir jumbotron -->
+
+    <!-- logo -->
+    <div id="logo">
+      <div class="container text-light">
+        <div class="row text-center justify-content-center">
+          <div class="row">
+            <div class="col d-flex justify-content-evenly align-items-center">
+              <div class="col-md-3 img-logo">
+                <a href="https://discord.gg/kYbNa4YQ"><img class="" width="55px" src="img/logo/sosmed/discord-logo-2-1.png" alt="" /></a>
+              </div>
+              <div class="col-md-3 img-logo">
+                <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ=="><img class="" width="50px" src="img/logo/sosmed/ig.png" alt="" /></a>
+              </div>
+              <div class="col-md-3 img-logo">
+                <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1"><img class="" width="50px" src="img/logo/sosmed/tiktok.png" alt="" /></a>
+              </div>
+              <div class="col-md-3 img-logo">
+                <a href="https://youtube.com/@agvianalif?feature=shared"><img class="" width="70px" src="img/logo/sosmed/yt.png" alt="" /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Akhir logo -->
+
+    <!-- About -->
+    <section id="about">
+      <div class="container text-light">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="text-info">About Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center gap-3 fs-5 text-center p-5">
+          <div class="col-sm-4 border border-info">
+            <h3 class="p-2">Info</h3>
+            <p>Saya adalah pelajar kelahiran 28 September 2006 asal kota Pemalang, Jawa Tengah, Indonesia yang saat ini tertarik ke bidang Informasi Komunikasi dengan sekaligus meminati bidang Desain Komunikasi dan Visual.</p>
+          </div>
+          <div class="col-sm-4 border border-info">
+            <h3 class="p-2">Education</h3>
+            <ul>
+              <li>
+                <h6 class="text-light">SDIT Al-Furqon</h6>
+                <p class="text-light">2013-2015</p>
+              </li>
+              <li>
+                <h6 class="text-light">SDN Cibogo</h6>
+                <p class="text-light">2015-2016</p>
+              </li>
+              <li>
+                <h6 class="text-light">SDN Suratmajan 2</h6>
+                <p class="text-light">2016-2019</p>
+              </li>
+              <li>
+                <h6 class="text-light">SMPN2 Maospati</h6>
+                <p class="text-light">2019-2022</p>
+              </li>
+              <li>
+                <h6 class="text-light">SMKS Pasundan Subang</h6>
+                <p class="text-light">2022-2025</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir About -->
+
+    <!-- skils -->
+    <section id="skills">
+      <div class="container text-light">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="text-info">Skills</h2>
+          </div>
+        </div>
+        <div class="row col d-flex justify-content-center text-center gap-3 p-3">
+          <div class="col-sm-4 card-skills border border-info p-5">
+            <img class="rounded-circle" src="img/skills/figma.png" width="50px" alt="" />
+            <p>Figma</p>
+            <div class="p-2">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 card-skills border border-info p-5">
+            <img class="" src="img/skills/premiere.png" width="50px" alt="" />
+            <p>Premiere Pro</p>
+            <div class="p-2">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 card-skills border border-info p-5">
+            <img class="p-1" src="img/skills/vscode.png" width="50px" alt="" />
+            <p>VS Code</p>
+            <div class="p-2">
+              <div class="progress">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end skils -->
+
+    <!-- Project -->
+    <section id="project">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="text-info">My Project</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center p-5">
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-light">
+              <img src="img/project/img1.jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-end">
+                <h5 class="card-title">Game</h5>
+                <p class="card-text">Beberapa tentang Game.</p>
+                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Info Lanjut</a>
+                <div class="modal fade text-light text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content bg-dark">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ada Masalah nih.....</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <p>Maaf untuk saat ini belum ada konten disini:(</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-light">
+              <img src="img/project/img2.jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-end">
+                <h5 class="card-title">Coming Soon</h5>
+                <p class="card-text">Coming Soon.</p>
+                <a href="#" class="btn btn-secondary disabled">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card bg-dark text-light">
+              <img src="img/project/img3.jpg" class="card-img-top" alt="..." />
+              <div class="card-body text-end">
+                <h5 class="card-title">Coming Soon</h5>
+                <p class="card-text">Coming Soon.</p>
+                <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true">Coming Soon</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Project -->
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container text-light">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2 class="text-info">Contact Me</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-8 p-5">
+            <form action="mailto:kurnallkuyan@gmail.com" method="get">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="email" />
+              </div>
+              <div class="mb-3">
+                <label for="pesan" class="form-label">Pesan</label>
+                <textarea class="form-control" id="pesan" rows="3"></textarea>
+              </div>
+              <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">Kirim</button>
+              <!-- Button trigger modal -->
+              <!-- Modal -->
+              <div class="modal fade text-light text-center" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content bg-dark">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLabel">Ada Masalah nih.....</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <p>Maaf untuk saat ini tidak bisa kirim pesan:(</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- modal end -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Contact -->
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-4 p-2">
+            <h5>Kontak Saya</h5>
+            <p>WA : 0838-4473-1408</p>
+          </div>
+          <div class="col-sm-4 p-2">
+            <h5>Link Terkait</h5>
+            <a href="#">Sekto</a>
+          </div>
+          <div class="col-sm-4 p-2 d-grid">
+            <h5>Sosial Media</h5>
+            <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==">Instagram</a>
+            <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1">Tiktok</a>
+            <a href="https://youtube.com/@agvianalif?feature=shared">YouTube</a>
+          </div>
+
+          <p>Created with by <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" class="text-info fw-bold">Agvian Alif</a></p>
+        </div>
+      </div>
+    </footer>
+    <!-- Akhir Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
