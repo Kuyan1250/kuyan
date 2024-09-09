@@ -127,20 +127,20 @@
     <div id="logo">
       <div class="container text-light">
         <div class="row text-center justify-content-center">
-            <div class="col d-flex justify-content-evenly align-items-center">
-              <div class="col-md-3 img-logo">
-                <a href="https://discord.gg/kYbNa4YQ"><img class="" width="55px" src="img/logo/sosmed/discord-logo-2-1.png" alt="" /></a>
-              </div>
-              <div class="col-md-3 img-logo">
-                <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ=="><img class="" width="50px" src="img/logo/sosmed/ig.png" alt="" /></a>
-              </div>
-              <div class="col-md-3 img-logo">
-                <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1"><img class="" width="50px" src="img/logo/sosmed/tiktok.png" alt="" /></a>
-              </div>
-              <div class="col-md-3 img-logo">
-                <a href="https://youtube.com/@agvianalif?feature=shared"><img class="" width="70px" src="img/logo/sosmed/yt.png" alt="" /></a>
-              </div>
+          <div class="col d-flex justify-content-evenly align-items-center">
+            <div class="col-md-3 img-logo">
+              <a href="https://discord.gg/kYbNa4YQ"><img class="" width="55px" src="img/logo/sosmed/discord-logo-2-1.png" alt="" /></a>
             </div>
+            <div class="col-md-3 img-logo">
+              <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ=="><img class="" width="50px" src="img/logo/sosmed/ig.png" alt="" /></a>
+            </div>
+            <div class="col-md-3 img-logo">
+              <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1"><img class="" width="50px" src="img/logo/sosmed/tiktok.png" alt="" /></a>
+            </div>
+            <div class="col-md-3 img-logo">
+              <a href="https://youtube.com/@agvianalif?feature=shared"><img class="" width="70px" src="img/logo/sosmed/yt.png" alt="" /></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -301,39 +301,29 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8 p-5">
-            <form action="mailto:kurnallkuyan@gmail.com" method="get">
+            <div class="alert alert-success alert-dismissible fade show d-none" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda sudah saya terima:)
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="web-porto">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal1">Kirim</button>
-              <!-- Button trigger modal -->
-              <!-- Modal -->
-              <div class="modal fade text-light text-center" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content bg-dark">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Ada Masalah nih.....</h5>
-                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                      <p>Maaf untuk saat ini tidak bisa kirim pesan:(</p>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- modal end -->
+              <button type="submit" class="btn btn-info btn-kirim">Kirim</button>
+
+              <button class="btn btn-info btn-loading d-none" type="button" disabled>
+                <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -365,7 +355,31 @@
       </div>
     </footer>
     <!-- Akhir Footer -->
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbzJ7MLTP9kzX6jnGaVdAQENITWGUQZVwkpSbyLGZ6AF9dBl_jVnNFZbf4fHJFnz4MNi5g/exec";
+      const form = document.forms["web-porto"];
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const alert = document.querySelector(".alert");
 
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // ketika tombol diklik
+        // tampilkan tombo loading
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            // tampilkan tombo kirim
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            alert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
