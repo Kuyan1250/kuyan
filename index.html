@@ -79,6 +79,18 @@
         list-style-type: none;
         padding-right: 2rem;
       }
+
+      /* -------------------- custom scrollbar -------------------- */
+
+      ::-webkit-scrollbar {
+        width: 15px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: linear-gradient(#0dcaf0, #0d6efd);
+      }
     </style>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar">
@@ -102,9 +114,9 @@
     </nav>
     <!-- Akhir navbar -->
 
-    <!-- jumbotron -->
-    <div class="b-example-divider cs " id="home"></div>
-    <div class="bg">
+    <!-- hero -->
+    <div class="b-example-divider cs"></div>
+    <div class="bg" id="home">
       <div class="blur">
         <div class="container col-xxl-8 px-4 py-5">
           <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
@@ -121,7 +133,7 @@
         </div>
       </div>
     </div>
-    <!-- Akhir jumbotron -->
+    <!-- Akhir hero -->
 
     <!-- logo -->
     <div id="logo">
@@ -246,23 +258,7 @@
               <div class="card-body text-end">
                 <h5 class="card-title">Game</h5>
                 <p class="card-text">Beberapa tentang Game.</p>
-                <a href="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-info">Info Lanjut</a>
-                <div class="modal fade text-light text-center" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content bg-dark">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ada Masalah nih.....</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      </div>
-                      <div class="modal-body">
-                        <p>Maaf untuk saat ini belum ada konten disini:(</p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <a href="https://kuyan1250.github.io/agvian.github.io/" type="button" class="btn btn-info">Info Lanjut</a>
               </div>
             </div>
           </div>
@@ -308,11 +304,11 @@
             <form name="web-porto">
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
