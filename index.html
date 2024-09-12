@@ -6,6 +6,7 @@
     <title>My Portfolio</title>
     <link rel="icon" type="image" href="img/logo.png" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <style>
       .bg {
@@ -124,10 +125,12 @@
               <img src="img/Hero1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
             </div>
             <div class="col-sm-6">
-              <h3 class="text-light fw-bold">Hi, I'm</h3>
-              <h1 class="display-5 fw-bold text-light lh-1 mb-3">Agvian Alif Ramdhani<a class="text-danger fs-1" style="text-decoration: none" href="http://smkpasundansubang.sch.id/">.</a></h1>
-              <p class="text-light fw-bold">UI/UX Designer</p>
-              <a type="button" href="#contact" class="btn btn-info text-light btn-lg">Contact</a>
+              <h3 class="text-light fw-bold" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">Hi, I'm</h3>
+              <h1 class="display-5 fw-bold text-light lh-1 mb-3" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
+                Agvian Alif Ramdhani<a class="text-danger fs-1" style="text-decoration: none" href="http://smkpasundansubang.sch.id/">.</a>
+              </h1>
+              <p class="text-light temo fw-bold"></p>
+              <a type="button" href="#contact" class="btn btn-info text-light btn-lg" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" data-aos-once="true">Contact</a>
             </div>
           </div>
         </div>
@@ -164,36 +167,36 @@
       <div class="container text-light">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2 class="text-info">About Me</h2>
+            <h2 class="text-info" data-aos="fade-up" data-aos-duration="2000">About Me</h2>
           </div>
         </div>
         <div class="row justify-content-center gap-3 fs-5 text-center p-5">
-          <div class="col-sm-4 border border-info">
+          <div class="col-sm-4 border border-info" data-aos="fade-up" data-aos-duration="2000">
             <h3 class="p-2">Info</h3>
             <p>Saya adalah pelajar kelahiran 28 September 2006 asal kota Pemalang, Jawa Tengah, Indonesia yang saat ini tertarik ke bidang Informasi Komunikasi dengan sekaligus meminati bidang Desain Komunikasi dan Visual.</p>
           </div>
-          <div class="col-sm-4 border border-info">
+          <div class="col-sm-4 border border-info" data-aos="fade-up" data-aos-duration="2000">
             <h3 class="p-2">Education</h3>
             <ul>
               <li>
-                <h6 class="text-light">SDIT Al-Furqon</h6>
-                <p class="text-light">2013-2015</p>
+                <small class="text-light">2013-2015</small>
+                <h4 class="text-light">SDIT Al-Furqon</h4>
               </li>
               <li>
-                <h6 class="text-light">SDN Cibogo</h6>
-                <p class="text-light">2015-2016</p>
+                <small class="text-light">2015-2016</small>
+                <h4 class="text-light">SDN Cibogo</h4>
               </li>
               <li>
-                <h6 class="text-light">SDN Suratmajan 2</h6>
-                <p class="text-light">2016-2019</p>
+                <small class="text-light">2016-2019</small>
+                <h4 class="text-light">SDN Suratmajan 2</h4>
               </li>
               <li>
-                <h6 class="text-light">SMPN2 Maospati</h6>
-                <p class="text-light">2019-2022</p>
+                <small class="text-light">2019-2022</small>
+                <h4 class="text-light">SMPN2 Maospati</h4>
               </li>
               <li>
-                <h6 class="text-light">SMKS Pasundan Subang</h6>
-                <p class="text-light">2022-2025</p>
+                <small class="text-light">2022-2025</small>
+                <h4 class="text-light">SMKS Pasundan Subang</h4>
               </li>
             </ul>
           </div>
@@ -207,11 +210,11 @@
       <div class="container text-light">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2 class="text-info">Skills</h2>
+            <h2 class="text-info" data-aos="fade-up" data-aos-duration="2000">Skills</h2>
           </div>
         </div>
-        <div class="row col d-flex justify-content-center text-center gap-3 p-5">
-          <div class="col-sm-4 card-skills border border-info p-5">
+        <div class="row col d-flex justify-content-center text-center p-5">
+          <div class="col-sm-4 card-skills border border-info p-5" data-aos="fade-up" data-aos-duration="2000">
             <img class="rounded-circle" src="img/skills/figma.png" width="50px" alt="" />
             <p>Figma</p>
             <div class="p-2">
@@ -220,7 +223,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-4 card-skills border border-info p-5">
+          <div class="col-sm-4 card-skills border border-info p-5" data-aos="fade-up" data-aos-duration="2000">
             <img class="" src="img/skills/premiere.png" width="50px" alt="" />
             <p>Premiere Pro</p>
             <div class="p-2">
@@ -229,7 +232,7 @@
               </div>
             </div>
           </div>
-          <div class="col-sm-4 card-skills border border-info p-5">
+          <div class="col-sm-4 card-skills border border-info p-5" data-aos="fade-up" data-aos-duration="2000">
             <img class="p-1" src="img/skills/vscode.png" width="50px" alt="" />
             <p>VS Code</p>
             <div class="p-2">
@@ -248,21 +251,21 @@
       <div class="container">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2 class="text-info">My Project</h2>
+            <h2 class="text-info" data-aos="fade-up" data-aos-duration="2000">My Project</h2>
           </div>
         </div>
         <div class="row justify-content-center p-5">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-duration="2000">
             <div class="card bg-dark text-light">
               <img src="img/project/img1.jpg" class="card-img-top" alt="..." />
               <div class="card-body text-end">
                 <h5 class="card-title">Website</h5>
-                <p class="card-text">Hanya Projek yg belum tuntas</p>
-                <a href="https://kuyan1250.github.io/agvian.github.io/" type="button" class="btn btn-info">Info Lanjut</a>
+                <p class="card-text">Projek dalam proses berjalan.</p>
+                <a href="https://kuyan1250.github.io/agvian.github.io/" type="button" class="btn btn-info">Lihat</a>
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-duration="2000">
             <div class="card bg-dark text-light">
               <img src="img/project/img2.jpg" class="card-img-top" alt="..." />
               <div class="card-body text-end">
@@ -272,7 +275,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-duration="2000">
             <div class="card bg-dark text-light">
               <img src="img/project/img3.jpg" class="card-img-top" alt="..." />
               <div class="card-body text-end">
@@ -292,7 +295,7 @@
       <div class="container text-light">
         <div class="row text-center mb-3">
           <div class="col">
-            <h2 class="text-info">Contact Me</h2>
+            <h2 class="text-info" data-aos="fade-up" data-aos-duration="2000">Contact Me</h2>
           </div>
         </div>
         <div class="row justify-content-center">
@@ -302,19 +305,19 @@
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
             <form name="web-porto">
-              <div class="mb-3">
+              <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
               </div>
-              <div class="mb-3">
+              <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
                 <label for="email" class="form-label">Email address</label>
                 <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
               </div>
-              <div class="mb-3">
+              <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
                 <label for="pesan" class="form-label">Pesan</label>
                 <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-info btn-kirim">Kirim</button>
+              <button data-aos="fade-up" data-aos-duration="2000" type="submit" class="btn btn-info btn-kirim">Kirim</button>
 
               <button class="btn btn-info btn-loading d-none" type="button" disabled>
                 <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
@@ -345,7 +348,7 @@
             <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1">Tiktok</a>
             <a href="https://youtube.com/@agvianalif?feature=shared">YouTube</a>
           </div>
-
+          <hr style="color: #0dcaf0" />
           <p>Created with by <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" class="text-info fw-bold">Agvian Alif</a></p>
         </div>
       </div>
@@ -375,6 +378,16 @@
           })
           .catch((error) => console.error("Error!", error.message));
       });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".temo", { duration: 1.5, delay: 2.7, text: "UI/UX Designer & Frontend Dev" });
+    </script>
+    <script>
+      AOS.init();
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
