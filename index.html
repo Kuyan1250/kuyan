@@ -71,6 +71,15 @@
         background-color: #222831;
       }
 
+      #preloader {
+        background: #000 url(img/loader.gif) no-repeat center center;
+        background-size: 15%;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+      }
+
       section {
         padding-top: 8rem;
         padding-bottom: 6rem;
@@ -95,6 +104,7 @@
     </style>
   </head>
   <body data-bs-spy="scroll" data-bs-target=".navbar">
+    <div id="preloader"></div>
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg shadow-lg fixed-top" data-bs-theme="dark">
       <div class="container">
@@ -367,6 +377,14 @@
       </div>
     </footer>
     <!-- Akhir Footer -->
+    <script>
+      var loader = document.getElementById("preloader");
+
+      window.addEventListener("load", function () {
+        loader.style.display = "none";
+      });
+    </script>
+
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzJ7MLTP9kzX6jnGaVdAQENITWGUQZVwkpSbyLGZ6AF9dBl_jVnNFZbf4fHJFnz4MNi5g/exec";
       const form = document.forms["web-porto"];
