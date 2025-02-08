@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,9 +11,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <style>
       .bg {
-        background-image: url(https://w.wallhaven.cc/full/rr/wallhaven-rrl13w.png);
+        background-image: url(assets/img/wall1.png);
         background-size: cover;
         padding-top: 2rem;
+        opacity: 50px;
       }
 
       .navbar {
@@ -24,6 +25,10 @@
 
       .bg-o {
         background-color: #000000;
+      }
+
+      .blur {
+        backdrop-filter: blur(30px);
       }
 
       .mk {
@@ -50,31 +55,15 @@
         filter: grayscale(0);
       }
 
-      #project {
-        /* background-color: #000000; */
-      }
-
       #logo {
         background-color: #000000;
         padding-top: 1rem;
         padding-bottom: 1rem;
       }
 
-      #about {
-        /* background-color: #000000; */
-      }
-
-      #skills {
-        /* background-color: #000000; */
-      }
-
-      #contact {
-        /* background-color: #000000; */
-      }
-
       #preloader {
         background: #000 url(assets/img/loader.gif) no-repeat center center;
-        background-size: 20%;
+        background-size: 10%;
         height: 100vh;
         width: 100%;
         position: fixed;
@@ -112,43 +101,56 @@
       }
     </style>
   </head>
-  <body data-bs-spy="scroll" data-bs-target=".navbar" style="background: linear-gradient(#000000, #000000, #090526, #1b0046)">
+  <body data-bs-spy="scroll" data-bs-target=".navbar" style="background: linear-gradient(#000000, #000000, #000000, #1b0046)">
     <div id="preloader"></div>
 
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg shadow-lg fixed-top" data-bs-theme="dark">
+    <nav id="navbar-example2" class="navbar navbar-expand-lg bg-dark shadow-lg fixed-top" data-bs-theme="dark">
       <div class="container">
-        <a class="navbar-brand" href="#"><img class="rounded-circle" src="assets/img/logo.png" width="50" alt="" /> Agvian</a>
-
+        <a class="navbar-brand" href="assets/page/agvian.html"><img class="rounded-circle" src="assets/img/logo.png" width="50" alt="" /> Agvian</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ms-auto">
-            <a class="nav-link active" aria-current="page" href="#home">Home</a>
-            <a class="nav-link" href="#about">About</a>
-            <a class="nav-link" href="#skills">Skills</a>
-            <a class="nav-link" href="#project">Project</a>
-            <a class="nav-link" href="#contact">Contact</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#project">Project</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
     </nav>
     <!-- Akhir navbar -->
-
     <!-- hero -->
     <div class="b-example-divider cs"></div>
-    <div class="bg" id="home">
+    <!-- <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0"></div> -->
+    <div class="" id="home">
       <div class="blur">
         <div class="container col-xxl-10 px-4 py-5">
           <div class="row align-items-center g-5 py-5">
             <div class="col-sm-7">
               <h3 class="text-light fw-bold" data-aos="fade-right" data-aos-duration="2000" data-aos-once="true">Hi, I'm</h3>
               <h1 class="display-1 fw-bold text-light lh-1 mb-3" data-aos="fade-up" data-aos-duration="2000" data-aos-once="true">
-                Agvian Alif Ramdhani<a class="text-danger fs-1" style="text-decoration: none" href="http://smkpasundansubang.sch.id/"><span class="spinner-grow bg-danger spinner-grow-sm" role="status" aria-hidden="true"></span></a>
+                Agvian Alif Ramdhani<a class="text-danger fs-1" style="text-decoration: none" href="http://smkpasundansubang.sch.id/" target="_blank"
+                  ><span class="spinner-grow bg-danger spinner-grow-sm" role="status" aria-hidden="true"></span
+                ></a>
               </h1>
               <h3 class="text-light temo fw-bold" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="1000" data-aos-once="true">The <span class="text-info" id="text-typed"></span></h3>
-              <a type="button" href="#contact" class="btn btn-info text-light btn-lg" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" data-aos-once="true">Contact</a>
+              <a type="button" href="#contact" class="btn btn-primary text-light btn-lg mt-2" data-aos="fade-up" data-aos-duration="2000" data-aos-delay="3000" data-aos-once="true">Contact</a>
             </div>
             <div class="col-8 col-sm-8 col-lg-5">
               <img src="assets/img/Hero1.png" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
@@ -165,13 +167,13 @@
         <div class="row text-center justify-content-center">
           <div class="col d-flex justify-content-evenly align-items-center">
             <div class="col-md-3 img-logo" data-aos="fade-in" data-aos-duration="2000">
-              <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ=="><img class="" width="50px" src="assets/img/logo/sosmed/ig.png" alt="" /></a>
+              <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" target="_blank"><img class="" width="50px" src="assets/img/logo/sosmed/ig.png" alt="" /></a>
             </div>
             <div class="col-md-3 img-logo" data-aos="fade-in" data-aos-duration="2000">
-              <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1"><img class="" width="50px" src="assets/img/logo/sosmed/tiktok.png" alt="" /></a>
+              <a href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1" target="_blank"><img class="" width="50px" src="assets/img/logo/sosmed/tiktok.png" alt="" /></a>
             </div>
             <div class="col-md-3 img-logo" data-aos="fade-in" data-aos-duration="2000">
-              <a href="https://youtube.com/@agvianalif?feature=shared"><img class="" width="70px" src="assets/img/logo/sosmed/yt.png" alt="" /></a>
+              <a href="https://youtube.com/@agvianalif?feature=shared" target="_blank"><img class="" width="70px" src="assets/img/logo/sosmed/yt.png" alt="" /></a>
             </div>
           </div>
         </div>
@@ -235,42 +237,51 @@
           <div class="col-sm-4 p-2" data-aos="fade-up" data-aos-duration="1500">
             <div class="bg-dark rounded card-skills p-5">
               <img class="rounded-circle" src="assets/img/skills/figma.png" width="50px" alt="" />
-              <p>Figma</p>
+              <p>Design/Foto</p>
               <div class="p-2">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Info example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <img class="pt-3" src="assets/img/skills/figma.png" width="50px" alt="" />
               <img class="pt-3" src="assets/img/skills/canva.png" width="50px" alt="" />
               <img class="pt-3" src="assets/img/skills/ps.png" width="65px" alt="" />
+              <div class="bottom pt-2">
+                <button type="button" data-bs-target="#exampleModalToggle4" data-bs-toggle="modal" class="btn btn-outline-primary">Detail</button>
+              </div>
             </div>
           </div>
           <div class="col-sm-4 p-2" data-aos="fade-up" data-aos-duration="1500">
             <div class="bg-dark rounded card-skills p-5">
               <img class="" src="assets/img/skills/premiere.png" width="50px" alt="" />
-              <p>Premiere Pro</p>
+              <p>Video Editor</p>
               <div class="p-2">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Info example" style="width: 50%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <img class="pt-3" src="assets/img/skills/premiere.png" width="55px" alt="" />
               <img class="pt-3" src="assets/img/skills/ae.png" width="65px" alt="" />
+              <div class="bottom pt-2">
+                <button type="button" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal" class="btn btn-outline-primary">Detail</button>
+              </div>
             </div>
           </div>
           <div class="col-sm-4 p-2" data-aos="fade-up" data-aos-duration="1500">
             <div class="bg-dark rounded card-skills p-5">
               <img class="p-1" src="assets/img/skills/vscode.png" width="50px" alt="" />
-              <p>VS Code</p>
+              <p>Coding</p>
               <div class="p-2">
                 <div class="progress">
-                  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                  <div class="progress-bar bg-primary" role="progressbar" aria-label="Info example" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                 </div>
               </div>
               <img class="pt-3" src="assets/img/skills/html.png" width="50px" alt="" />
               <img class="pt-3" src="assets/img/skills/css.png" width="50px" alt="" />
               <img class="pt-3" src="assets/img/skills/js.png" width="65px" alt="" />
+              <div class="bottom pt-2">
+                <button type="button" data-bs-target="#exampleModalToggle5" data-bs-toggle="modal" class="btn btn-outline-primary">Detail</button>
+              </div>
             </div>
           </div>
         </div>
@@ -293,18 +304,7 @@
               <div class="card-body text-end">
                 <h5 class="card-title" data-aos="fade-up" data-aos-duration="1500">Website</h5>
                 <p class="card-text" data-aos="fade-up" data-aos-duration="1500">Projek dalam proses berjalan.</p>
-                <div class="btn-group" data-aos="fade-up" data-aos-duration="1500">
-                  <button type="button" class="btn btn-info dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Lihat</button>
-                  <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a class="link-info dropdown-item" href="https://kuyan1250.github.io/agvian.github.io/">Website 1</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#">none</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#">none</a></li>
-                    <li><hr class="dropdown-divider" /></li>
-                    <li><a class="dropdown-item" href="#">none</a></li>
-                  </ul>
-                </div>
+                <button class="btn btn-info" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-aos="fade-up" data-aos-duration="1500">Lebih Lanjut <span class="badge text-bg-danger">2</span></button>
               </div>
             </div>
           </div>
@@ -314,17 +314,7 @@
               <div class="card-body text-end">
                 <h5 class="card-title" data-aos="fade-up" data-aos-duration="1500">Coming Soon</h5>
                 <p class="card-text" data-aos="fade-up" data-aos-duration="1500">Coming Soon.</p>
-                <a href="#" class="btn btn-secondary disabled" data-aos="fade-up" data-aos-duration="1500">Coming Soon</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-duration="1500">
-            <div class="card bg-dark text-light">
-              <img src="assets/img/project/notfound.png" class="card-img-top" alt="..." data-aos="fade-up" data-aos-duration="1500" />
-              <div class="card-body text-end">
-                <h5 class="card-title" data-aos="fade-up" data-aos-duration="1500">Coming Soon</h5>
-                <p class="card-text" data-aos="fade-up" data-aos-duration="1500">Coming Soon.</p>
-                <a href="#" class="btn btn-secondary disabled" tabindex="-1" role="button" aria-disabled="true" data-aos="fade-up" data-aos-duration="1500">Coming Soon</a>
+                <button class="btn btn-info" data-bs-target="#exampleModalToggle1" data-bs-toggle="modal" data-aos="fade-up" data-aos-duration="1500">Lebih Lanjut</button>
               </div>
             </div>
           </div>
@@ -349,11 +339,11 @@
             </div>
             <form name="web-porto">
               <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
-                <label for="name" class="form-label">Name</label>
+                <label for="name" class="form-label">Nama</label>
                 <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" required />
               </div>
               <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
-                <label for="email" class="form-label">Email address</label>
+                <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" aria-describedby="email" name="email" required />
               </div>
               <div class="mb-3" data-aos="fade-up" data-aos-duration="2000">
@@ -383,18 +373,18 @@
           </div>
           <div class="col-sm-4 p-2">
             <h5>Link Terkait</h5>
-            <a href="#">Sekto</a>
+            <a href="#" target="_blank">Sekto</a>
           </div>
           <div class="col-sm-4 p-2 d-grid">
             <h5>Sosial Media</h5>
             <div class="d-flex justify-content-center gap-3">
-              <a class="link-light" href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ=="><i class="bi bi-instagram"></i></a>
-              <a class="link-light" href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1"><i class="bi bi-tiktok"></i></a>
-              <a class="link-light" href="https://youtube.com/@agvianalif?feature=shared"><i class="bi bi-youtube"></i></a>
+              <a class="link-light" href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" target="_blank"><i class="bi bi-instagram"></i></a>
+              <a class="link-light" href="https://www.tiktok.com/@kuyvi21?_t=8pWQ1MchzV9&_r=1" target="_blank"><i class="bi bi-tiktok"></i></a>
+              <a class="link-light" href="https://youtube.com/@agvianalif?feature=shared" target="_blank"><i class="bi bi-youtube"></i></a>
             </div>
           </div>
           <hr style="color: #0dcaf0" />
-          <p>©2024 Created with by <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" class="text-info fw-bold">Agvian Alif</a></p>
+          <p>©2024 Created with by <a href="https://www.instagram.com/yanvian_alif?igsh=MWd6dWI5enVmaGFzaQ==" target="_blank" class="text-info fw-bold">Agvian Alif</a></p>
         </div>
       </div>
     </footer>
@@ -405,13 +395,136 @@
       <div class="position-relative">
         <div class="position-absolute d-flex align-items-center bottom-0 end-0">
           <div class="menu pmd-floating-action p-3" role="navigation">
-            <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect btn-lg btn-primary" data-title="Add" href="https://discord.gg/JPbsGasG">
-              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="35" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
+            <a class="pmd-floating-action-btn btn pmd-btn-fab pmd-btn-raised pmd-ripple-effect rounded-circle btn-lg btn-info" data-title="Add" href="https://discord.gg/ZkyMp2EX" target="_blank">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="45" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 16">
                 <path
                   d="M13.545 2.907a13.2 13.2 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.2 12.2 0 0 0-3.658 0 8 8 0 0 0-.412-.833.05.05 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.04.04 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032q.003.022.021.037a13.3 13.3 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019q.463-.63.818-1.329a.05.05 0 0 0-.01-.059l-.018-.011a9 9 0 0 1-1.248-.595.05.05 0 0 1-.02-.066l.015-.019q.127-.095.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.05.05 0 0 1 .053.007q.121.1.248.195a.05.05 0 0 1-.004.085 8 8 0 0 1-1.249.594.05.05 0 0 0-.03.03.05.05 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.2 13.2 0 0 0 4.001-2.02.05.05 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.03.03 0 0 0-.02-.019m-8.198 7.307c-.789 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612m5.316 0c-.788 0-1.438-.724-1.438-1.612s.637-1.613 1.438-1.613c.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612"
                 />
               </svg>
             </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal -->
+    <!-- modal1 -->
+    <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-light bg-dark">
+          <div class="modal-body text-center">
+            <i class="bi bi-check2-circle" style="font-size: 90px; color: #00cc11"></i>
+            <h3 style="margin-top: -15px">Tidak ada apapun</h3>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal2 -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-light bg-dark">
+          <div class="modal-body text-center">
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="https://tse2.mm.bing.net/th?id=OIP.Q3lAJ87M1GUUiij_-b7WAQHaHa&pid=Api&P=0&h=220" style="width: 35px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <h6>Projek 1</h6>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+            <hr />
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3251108/person-icon-md.png" style="width: 35px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <h6>Projek 1</h6>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal3 -->
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-light bg-dark">
+          <div class="modal-body text-center">
+            <h6>Video editing</h6>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="assets/img/skills/ae.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+                <img src="assets/img/skills/premiere.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal4 -->
+    <div class="modal fade" id="exampleModalToggle4" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-light bg-dark">
+          <div class="modal-body text-center">
+            <h6>Foto Editing</h6>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="assets/img/skills/canva.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+                <img src="assets/img/skills/ps.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+            <h6>UI Design</h6>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="assets/img/skills/figma.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal">Batal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- modal5 -->
+    <div class="modal fade" id="exampleModalToggle5" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-light bg-dark">
+          <div class="modal-body text-center">
+            <h6>Frontend</h6>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="assets/img/skills/html.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+                <img src="assets/img/skills/css.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+            <hr />
+            <h6>Backend</h6>
+            <div class="d-flex justify-content-between align-items-center p-1">
+              <div>
+                <img src="assets/img/skills/php.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+                <img src="assets/img/skills/js.png" style="width: 50px" class="img-thumbnail rounded-circle" alt="..." />
+              </div>
+              <a href="https://kuyan1250.github.io/agvian.github.io/" class="btn btn-success" target="_blank">Lihat<i class="bi bi-caret-right-fill"></i></a>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-danger" data-bs-target="#exampleModal" data-bs-toggle="modal">Batal</button>
           </div>
         </div>
       </div>
@@ -459,7 +572,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
       var typed = new Typed("#text-typed", {
-        strings: ["UI/UX Designer", "Frontend", "Backend"],
+        strings: ["Video Editing", "UI/UX Designer", "Frontend", "Programer"],
         typeSpeed: 100,
         backSpeed: 60,
         loop: true,
